@@ -6,10 +6,10 @@ class Program
     static void Main(string[] args)
     {
         string pattern = @"^(0|\+?94)?([0-9]{9})$";
-
         string phoneNumber;
         string trimNumber;
         string standardPhoneNumber;
+        string responese;
 
         while (true)
         {
@@ -31,7 +31,7 @@ class Program
                 // Standardize the phone number
                 standardPhoneNumber = Regex.Replace(trimNumber, pattern, "+94$2");
                 Console.WriteLine($"Is the number is correct: {standardPhoneNumber} Press 'y' for yes or 'n' for input again");
-                string responese = Console.ReadLine().Trim();
+                responese = Console.ReadLine().Trim();
 
                 if (responese == "y")
                     Console.WriteLine("Standardized phone number: " + standardPhoneNumber);
