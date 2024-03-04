@@ -21,7 +21,7 @@ class Program
 
             trimNumber = Regex.Replace(phoneNumber, @"\s", "");
 
-            if (trimNumber.Length < 9)
+            if (trimNumber.Length < 9 || trimNumber.Length > 10)
             {
                 Console.WriteLine("Invalid Phone Number");
                 continue;
@@ -30,7 +30,7 @@ class Program
             {
                 // Standardize the phone number
                 standardPhoneNumber = Regex.Replace(trimNumber, pattern, "+94$2");
-                Console.WriteLine($"Is your phone number is: {standardPhoneNumber} Press 'y' for yes or 'n' for input again");
+                Console.WriteLine($"Is the number is correct: {standardPhoneNumber} Press 'y' for yes or 'n' for input again");
                 string responese = Console.ReadLine().Trim();
 
                 if (responese == "y")
