@@ -28,7 +28,6 @@ class Program
             }
             else
             {
-                // Standardize the phone number
                 standardPhoneNumber = Regex.Replace(trimNumber, pattern, "+94$2");
                 Console.WriteLine($"Is the number is correct: {standardPhoneNumber} Press 'y' for yes or 'n' for input again");
                 responese = Console.ReadLine().Trim();
